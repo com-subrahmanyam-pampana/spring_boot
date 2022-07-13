@@ -30,6 +30,4 @@ public class Employee  implements Serializable{
 		this.salary = salary;
 	}
 	
-	
-
 }

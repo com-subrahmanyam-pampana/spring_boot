@@ -27,11 +27,16 @@ public class RestControler1 {
 		return "For user ID ="+userID+" balance is 100";
 	}
 	
-	 @PostMapping("/newemployee")
-	  public String newEmployeeDetails(@RequestBody Employee newEmployee) {
+	@PostMapping("/newemployee")
+	 public String newEmployeeDetails(@RequestBody Employee newEmployee) {
 	    return "Data of " +newEmployee.name+ " is saved ";
-	  }
+	 }
 	
+	
+	@PostMapping("/newemployeeAndQuery")
+	 public String newEmployeeDetailsWithQuery(@RequestBody Employee newEmployee,@RequestParam("data") String data) {
+	    return "Data of " +newEmployee.name+ " is saved  to " +data;
+	 }
 	
 
 }
