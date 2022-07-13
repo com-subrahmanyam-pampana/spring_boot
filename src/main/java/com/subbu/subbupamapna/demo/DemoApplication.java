@@ -10,16 +10,11 @@ import com.subbu.subbupamapna.demo.springconfigsalarm.Door;
 @SpringBootApplication
 public class DemoApplication {
 	
-	
-	
-	
 	public static  void alarmExampleTest() {
 		ApplicationContext context=new FileSystemXmlApplicationContext("classpath:alarmbeans.xml");
 		Door door=context.getBean("doorBeanWithSoundAlarm",Door.class);
 		door.open();
 		door.close();
-		
-		
 	}
 
 	public static void main(String[] args) {
