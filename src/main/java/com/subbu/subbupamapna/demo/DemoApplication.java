@@ -18,18 +18,14 @@ public class DemoApplication {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.scan("com.subbu.subbupamapna.demo.repositoryexample");
         context.refresh();
-  
 		
 		StudentRepository repository = context.getBean(StudentRepository.class);
-		  
         // testing the store method
         repository.save(new Student(1L, "Anshul", 25));
         repository.save(new Student(2L, "Mayank", 23));
-  
         // testing the retrieve method
         Student student = repository.findStudentById(1L);
         System.out.println(student);
-  
         // close the spring context
         context.close();
 	}
