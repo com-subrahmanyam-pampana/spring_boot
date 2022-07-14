@@ -11,8 +11,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.subbu.subbupamapna.demo.jpaexamples.entity.UserEntity;
-import com.subbu.subbupamapna.demo.repositoryexample.Student;
-import com.subbu.subbupamapna.demo.repositoryexample.StudentRepository;
+
 
 
 @SpringBootApplication
@@ -43,28 +42,14 @@ public class DemoApplication {
 	        emf.close();  
 	        em.close();  
 	}
-	public static void demoRepository() {
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("com.subbu.subbupamapna.demo.repositoryexample");
-        context.refresh();
-		
-		StudentRepository repository = context.getBean(StudentRepository.class);
-        // testing the store method
-        repository.save(new Student(1L, "Anshul", 25));
-        repository.save(new Student(2L, "Mayank", 23));
-        // testing the retrieve method
-        Student student = repository.findStudentById(1L);
-        System.out.println(student);
-        // close the spring context
-        context.close();
-	}
 	
 	
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		
-		//demoRepository();
+		
 		userEntity();
 	}
 
