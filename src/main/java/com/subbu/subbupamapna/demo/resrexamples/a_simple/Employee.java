@@ -1,4 +1,4 @@
-package com.subbu.subbupamapna.demo.resrexamples;
+package com.subbu.subbupamapna.demo.resrexamples.a_simple;
 
 import java.io.Serializable;
 
