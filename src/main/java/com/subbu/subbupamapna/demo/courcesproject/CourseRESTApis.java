@@ -14,7 +14,7 @@ public class CourseRESTApis {
 	
 	@GetMapping("course/get")
 	public Course getCourse(@RequestParam("id") long id ) {
-		return courceRepository.findByID(id);
+		return courceRepository.findByCourseID(id);
 	}
 	
 	

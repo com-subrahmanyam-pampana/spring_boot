@@ -17,18 +17,16 @@ public class CourceRepository {
 	
 	
 	
-	public Course findByID(long id) {
-		Course teacher=(Course )em.find(Course.class ,id);
-		return teacher;
+	public Course findByCourseID(long id) {
+		Course course=(Course )em.find(Course.class ,id);
+		return course;
 	}
-	
 	
     public void deleteByID(int Id) {
 		  new Course();
 	}
     
-    
-
+   
 	public Course save(Course cource) {	
 		return  new Course();
 	}
