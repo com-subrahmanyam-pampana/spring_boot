@@ -37,11 +37,7 @@ public class PersonJDBCDAO {
 	
 	
 	
-	  public Person findByIDWithNewRowMapper(int id){
-			
-			return jdbcTemplate.queryForObject("select * from person where id=?", new Object[] {id},new PersonRowMapper());
-			
-		}
+	
 	
 	
 	public List<Person> findAll(){
