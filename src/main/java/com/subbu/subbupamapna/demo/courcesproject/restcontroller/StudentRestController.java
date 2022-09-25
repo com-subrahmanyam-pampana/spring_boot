@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.subbu.subbupamapna.demo.courcesproject.Passport;
 import com.subbu.subbupamapna.demo.courcesproject.Student;
-import com.subbu.subbupamapna.demo.courcesproject.repos.PassportRepository;
 import com.subbu.subbupamapna.demo.courcesproject.repos.StudentRepository;
 
 
@@ -34,7 +31,5 @@ public class StudentRestController {
 		return passportRepository.insert(passport);
 	}
 	
-	
-	
-	
+		
 }

@@ -23,6 +23,8 @@ public class StudentRepository {
 	
 	
 	
+
+	@Transactional
 	public Student findByID(Long id) {
 		Student passport=(Student)entityManager.find(Student.class ,id);
 		return passport;

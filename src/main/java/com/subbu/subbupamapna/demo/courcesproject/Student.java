@@ -3,9 +3,11 @@ package com.subbu.subbupamapna.demo.courcesproject;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.transaction.Transactional;
 
 @Entity
 public class Student {
@@ -21,7 +23,8 @@ public class Student {
 	
 	
 	@OneToOne(
-			cascade = CascadeType.ALL
+			cascade = CascadeType.ALL,
+			fetch=FetchType.EAGER
 			)
 	private Passport passport;
 	

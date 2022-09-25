@@ -23,7 +23,6 @@ public class CourseRESTApis {
 	}
 	
 	
-	
 	@PostMapping("course/add")
 	public Course addCourse(@RequestBody Course course  ) {
 		return courceRepository.insert(course);

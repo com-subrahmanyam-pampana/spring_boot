@@ -3,6 +3,8 @@ package com.subbu.subbupamapna.demo.courcesproject;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Review {
@@ -14,7 +16,16 @@ public class Review {
 	
 	private String description;
 	
+	@ManyToOne
+	private Course course;
 	
+	
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 	protected Review() {	
 	}
     public  Review(String rating,String desription) {
