@@ -1,4 +1,4 @@
-package com.subbu.subbupamapna.demo.courcesproject;
+package com.subbu.subbupamapna.demo.courcesproject.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.subbu.subbupamapna.demo.courcesproject.Course;
+import com.subbu.subbupamapna.demo.courcesproject.repos.CourceRepository;
 
 @RestController
 public class CourseRESTApis {
@@ -34,5 +37,4 @@ public class CourseRESTApis {
 	}
 	
 	
-
 }

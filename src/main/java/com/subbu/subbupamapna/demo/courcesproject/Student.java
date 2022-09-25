@@ -1,9 +1,11 @@
 package com.subbu.subbupamapna.demo.courcesproject;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Student {
@@ -18,8 +20,19 @@ public class Student {
 	private String name;
 	
 	
+	@OneToOne(
+			cascade = CascadeType.ALL
+			)
+	private Passport passport;
+	
+	
+	public Passport getPassport() {
+		return passport;
+	}
 
-
+	public void setPassport(Passport passport) {
+		this.passport = passport;
+	}
 
 	public String getName() {
 		return name;
