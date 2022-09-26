@@ -31,7 +31,6 @@ public class Review {
     public  Review(String rating,String desription) {
     	this.description=desription;
     	this.rating=rating;
-		
 	}
 	
 
