@@ -10,6 +10,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import com.subbu.subbupamapna.demo.aop.AOPMain;
+import com.subbu.subbupamapna.demo.aop.business.Business1;
 import com.subbu.subbupamapna.demo.jdbc.PersonJDBCDAO;
 
 @SpringBootApplication
@@ -21,6 +23,11 @@ public class DemoApplication implements CommandLineRunner {
 	
 	@Autowired
 	PersonJDBCDAO  personJDBCDAO;
+	@Autowired
+	Business1 business1 ;
+	
+   @Autowired
+	Business1 business2 ;
 	
 	
 	public static void main(String[] args) {
@@ -31,7 +38,12 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		
 		logger.info("All users->{}",personJDBCDAO.findAll());
+		
+		 logger.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<AOP>>>>>>>>>>>>>");
+		   logger.info(business1.calculate());
+		   logger.info(business1.calculate());
 		
 	
 	}
